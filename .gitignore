@@ -20,3 +20,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+public/index.html
+glassdoor/new_job_search/javascript.js
