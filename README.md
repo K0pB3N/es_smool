@@ -1,4 +1,4 @@
-# IS216 Project
+#  ES-Platform
 
 ## Project setup
 ```
