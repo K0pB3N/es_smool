@@ -1,5 +1,6 @@
-Welcome particle
-
+[v-cloak] {
+    display: none;
+}
   body .particletext {
     text-align: left;
     font-size: 2.5rem;

@@ -1,3 +1,7 @@
+[v-cloak] {
+    display: none;
+}
+
 .todo-wrapper {
     width: 23.5em;
     max-width: 100%;
