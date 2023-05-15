@@ -245,12 +245,17 @@
         <b-col sm="12" md="12" lg="12" xl="3" cols="12">
           <div class="box mt-3" id="schedule">
             <div class="d-flex align-items-center flex-column">
-              <h4 class="particletext mb-4 text-center">Информация о направлении и изучаемых дисциплинах ✏️</h4>
+              <h4 class="particletext mb-4 text-center">Направление<br>и<br>изучаемые дисциплины ✏️</h4>
               <ModuleCard
                 v-for="mod in modules"
                 :key="mod"
                 v-bind:moduleFullName="mod"
               />
+              <ModuleCard
+                  v-for="less in sub"
+                  :key="less"
+                  v-bind:groupes="mod"
+                />
             </div>
           </div>
         </b-col>
@@ -265,6 +270,7 @@ import QuoteBar from "@/components/QuoteBar";
 import ModuleCard from "@/components/ModuleCard";
 import Important from "@/components/Important";
 import Meeting from "@/components/Meeting";
+import Schedule from "@/components/Schedule";
 
 import $ from "jquery";
 
@@ -278,7 +284,8 @@ export default {
     QuoteBar,
     ModuleCard,
     Important,
-    Meeting
+    Meeting,
+    Schedule
   },
   data() {
     return {
@@ -288,6 +295,7 @@ export default {
       modules: [],
       newList: [],
       new_item: "",
+      sub: [],
       showComplete: false,
       username: ""
     };
@@ -495,7 +503,7 @@ export default {
     this.modules = window.localStorage.getItem("modules");
     this.modules = this.modules.split(",");
     console.log(this.modules);
-
+    
     if (window.localStorage) {
       if (!localStorage.getItem("firstReLoad")) {
         localStorage["firstReLoad"] = true;

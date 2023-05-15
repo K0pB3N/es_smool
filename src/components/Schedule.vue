@@ -3,7 +3,7 @@
     <div class="container-lecture">
       <section class="section-nav">
         <ul class="list-lecture">
-          <li class="card-lecture" v-for="module in modules" :key="module.id">
+          <li class="card-lecture" v-for="module in groupes" :key="module.id">
             <a class="lecture-title" href="#"
               >{{ module[Object.keys(module)][1] }} ({{
                 module[Object.keys(module)][0]
@@ -25,7 +25,7 @@
           </li>
         </ul>
       </section>
-      <section class="section-list">
+      <!-- <section class="section-list">
         <div class="container">
           <div class="table-schedule">
             <div class="timeline">
@@ -37,7 +37,7 @@
                 <li><span>16:30</span></li>
                 <li><span>18:00</span></li>
                 <li><span>19:40</span></li>
-                <!-- <li><span>11:30</span></li>
+                <li><span>11:30</span></li>
                 <li><span>12:00</span></li>
                 <li><span>12:30</span></li>
                 <li><span>13:00</span></li>
@@ -52,7 +52,7 @@
                 <li><span>17:30</span></li>
                 <li><span>18:00</span></li>
                 <li><span>18:30</span></li>
-                <li><span>19:00</span></li> -->
+                <li><span>19:00</span></li>
               </ul>
             </div>
 
@@ -60,7 +60,7 @@
               <ul class="list-lecture-item">
                 <li class="timeline-vertical">
                   <div class="top-info today">
-                    <h2 class="day">Пн</h2>
+                    <h2 class="day">{{}}</h2>
                   </div>
                   <ul></ul>
                 </li>
@@ -79,7 +79,7 @@
                           <h6 class="lecture-title ">
                             Mangement Communication
                           </h6>
-                          <h6 class="lecture-location">LKCSOB SR-3-3</h6>
+                          <h6 class="lecture-location">ИКБО-13-20</h6>
                         </div>
                         <div
                           class="lecture-noti"
@@ -99,7 +99,7 @@
 
                 <li class="timeline-vertical">
                   <div class="top-info">
-                    <h2 class="day">Ср</h2>
+                    <h2 class="day">{{ groupes.day["Пн"] }}</h2>
                   </div>
 
                   <ul></ul>
@@ -107,7 +107,7 @@
 
                 <li class="timeline-vertical">
                   <div class="top-info">
-                    <h2 class="day">Чт</h2>
+                    <h2 class="day">{{ groupes.day["Вт"] }}</h2>
                   </div>
 
                   <ul></ul>
@@ -115,7 +115,7 @@
 
                 <li class="timeline-vertical">
                   <div class="top-info">
-                    <h2 class="day">Пт</h2>
+                    <h2 class="day">{{ groupes.day["Ср"] }}</h2>
                   </div>
 
                   <ul></ul>
@@ -124,69 +124,50 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Navbar",
+  name: "Schedule",
   data() {
-    const modules = [
-      {
-        COMM101: [
-          "G1",
-          "Management Communication",
-          "Lindy Ong",
-          "LKCSOB SR-3-3",
-          "1200 - 15:15",
-          "Вт"
-        ]
-      },
-      {
-        IS210: [
-          "G3",
-          "Biz Process Analysis & Solutioning",
-          "Rafael J. Barros",
-          "SIS SR-2-4",
-          "0815 - 1130",
-          "Ср"
-        ]
-      },
-      {
-        IS211: [
-          "G7",
-          "Interaction Design Prototyping",
-          "Benjamin Gan",
-          "SIS SR-2-3",
-          "1200 - 1515",
-          "Ср"
-        ]
-      },
-      {
-        OHBR002: [
-          "G12",
-          "Ethics and Corporate Responsibility",
-          "Amy Seow",
-          "LKCSOB SR-2-4",
-          "0815 - 1130",
-          "Чт"
-        ]
-      },
-      {
-        IS216: [
-          "G2",
-          "Web Application Development 2",
-          "Kyong Jin Shim",
-          "SIS-B1-1",
-          "0815 - 1130",
-          "Пт"
-        ]
-      }
-    ];
+    const groupes = {
+        IKBO_13_20: {
+          Id: "ИКБО-13-20",
+          Audit: [
+            {Num: "А-12"},
+            {Num: "Г-227"},
+            {Num: "Б-210"},
+            {Num: "Д-311"}
+        ],
+          Sub: [
+            {SubName: "Иммитационное моделирование"},
+            {SubName: "Основы сетевых технологий"},
+            {SubName: "Тестирование и верификация ПО"},
+            {SubName: "Исследование операций"}
+        ],
+          Time: [
+            {TimeSub: "09:00"},
+            {TimeSub: "10:40"},
+            {TimeSub: "12:40"},
+            {TimeSub: "14:20"},
+            {TimeSub: "16:30"},
+            {TimeSub: "18:00"},
+            {TimeSub: "19:40"}
+        ],
+          Day: [
+            {NameOfDay: "Пн"},
+            {NameOfDay: "Вт"},
+            {NameOfDay: "Ср"},
+            {NameOfDay: "Чт"},
+            {NameOfDay: "Пт"}
+          ]
+        }
+      };
     return {
-      modules
+      groupes
     };
   }
 };
