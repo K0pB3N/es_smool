@@ -115,8 +115,7 @@
 
             <div
               class="row d-flex justify-content-md-left justify-content-center"
-              id="selectModHeader"
-            >
+              id="selectModHeader">
               <h4>Выберите Ваши курсы:</h4>
             </div>
 
@@ -318,7 +317,6 @@ require("@/assets/styles/login.css");
 </script>
 
 <style>
-
 #logo {
   max-width: 50%;
   max-height: 50%;
@@ -385,8 +383,6 @@ require("@/assets/styles/login.css");
 #courseText {
   width: 50%;
 }
-
-
 /* @keyframes bgcolor {
   0% {
     background: #ffdcce;
@@ -424,4 +420,5 @@ require("@/assets/styles/login.css");
   margin-left: auto;
   /* margin-right: auto; */
 }
+/* eslint-disable */
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="settings" class="text-center">
     <Navbar />
-    <h1 class="text-center title">Изменить Ваше направление</h1>
+    <h1 class="text-center title">Измените Ваше направление</h1>
     <div class="container">
       <section v-for="n in modules.length" :value="n" :key="n">
         <b-field :key="n">
@@ -40,7 +40,7 @@
       </section>
     </div>
     <b-button class="button" variant="success" @click="confirm()"
-      >Confirm</b-button
+      >Подтвердить</b-button
     >
     <div id="success" v-show="clicked">Сохранение прошло успешно!</div>
   </div>

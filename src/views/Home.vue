@@ -245,7 +245,7 @@
         <b-col sm="12" md="12" lg="12" xl="3" cols="12">
           <div class="box mt-3" id="schedule">
             <div class="d-flex align-items-center flex-column">
-              <h4 class="particletext mb-4 text-center">Информация о дисциплинах ✏️</h4>
+              <h4 class="particletext mb-4 text-center">Информация о направлении и изучаемых дисциплинах ✏️</h4>
               <ModuleCard
                 v-for="mod in modules"
                 :key="mod"
