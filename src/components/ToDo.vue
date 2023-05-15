@@ -2,14 +2,14 @@
   <div id="todoapp" class="text-center">
     <div class="container">
       <div class="row header">
-        <h3 class="h1 col center-align">My To-Dos</h3>
+        <h3 class="h1 col center-align">Мои задачи</h3>
       </div>
       <div class="row">
         <form @submit.prevent="submitTodo" class="col">
           <div class="input-field">
             <b-form-input v-model="newTodo"></b-form-input>
           </div>
-          <button class="btn">Add</button>
+          <button class="btn">Добавить</button>
         </form>
       </div>
       <div class="row">

@@ -21,10 +21,11 @@
       <button
         type="button"
         class="btn btn-outline-primary"
-        style="width:10rem;"
+        style="width:15rem;"
         @click="redirect(modCode)"
       >
-        <span class="text-center" style="font-size:80%">View Module Info</span>
+        <span class="text-center">Просмотреть информацию</span><br/>
+        <span class="text center">о направлении</span>
       </button>
     </div>
   </div>
@@ -63,7 +64,7 @@ export default {
   },
   methods: {
     redirect(modCode) {
-      window.open("https://smumods.com/module/" + modCode, "_blank");
+      window.open("https://www.mirea.ru/search/index.php?tags=&how=r&q=" + modCode, "_blank");
     }
   }
 };
@@ -76,8 +77,8 @@ export default {
   display: inline-block;
   position: relative;
   margin-bottom: 1em;
-  height: 18rem;
-  width: 18rem;
+  height: 35vh;
+  width: 20rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }

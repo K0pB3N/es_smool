@@ -18,9 +18,9 @@
               >
             </h6>
             <ul class="list-lecture-info">
-              <li>Course Code : {{ Object.keys(module)[0] }}</li>
-              <li>Professor : {{ module[Object.keys(module)][2] }}</li>
-              <li>Location : {{ module[Object.keys(module)][3] }}</li>
+              <li>Код предмета : {{ Object.keys(module)[0] }}</li>
+              <li>Преподаватель : {{ module[Object.keys(module)][2] }}</li>
+              <li>Аудитория : {{ module[Object.keys(module)][3] }}</li>
             </ul>
           </li>
         </ul>
@@ -30,14 +30,14 @@
           <div class="table-schedule">
             <div class="timeline">
               <ul>
-                <li><span>08:00</span></li>
-                <li><span>08:30</span></li>
                 <li><span>09:00</span></li>
-                <li><span>09:30</span></li>
-                <li><span>10:00</span></li>
-                <li><span>10:30</span></li>
-                <li><span>11:00</span></li>
-                <li><span>11:30</span></li>
+                <li><span>10:40</span></li>
+                <li><span>12:40</span></li>
+                <li><span>14:20</span></li>
+                <li><span>16:30</span></li>
+                <li><span>18:00</span></li>
+                <li><span>19:40</span></li>
+                <!-- <li><span>11:30</span></li>
                 <li><span>12:00</span></li>
                 <li><span>12:30</span></li>
                 <li><span>13:00</span></li>
@@ -52,7 +52,7 @@
                 <li><span>17:30</span></li>
                 <li><span>18:00</span></li>
                 <li><span>18:30</span></li>
-                <li><span>19:00</span></li>
+                <li><span>19:00</span></li> -->
               </ul>
             </div>
 
@@ -60,14 +60,14 @@
               <ul class="list-lecture-item">
                 <li class="timeline-vertical">
                   <div class="top-info today">
-                    <h2 class="day">Mon</h2>
+                    <h2 class="day">Пн</h2>
                   </div>
                   <ul></ul>
                 </li>
 
                 <li class="timeline-vertical">
                   <div class="top-info">
-                    <h2 class="day">Tue</h2>
+                    <h2 class="day">Вт</h2>
                   </div>
                   <ul>
                     <li
@@ -86,7 +86,6 @@
                           data-toggle="tooltip"
                           data-placement="top"
                           title=""
-                          data-original-title="과제 설명 텍스트 과제 설명 텍스트 과제 설명 텍스트"
                         >
                           <i class="material-icons ic-lecture-noti"
                             >assignment</i
@@ -100,7 +99,7 @@
 
                 <li class="timeline-vertical">
                   <div class="top-info">
-                    <h2 class="day">Wed</h2>
+                    <h2 class="day">Ср</h2>
                   </div>
 
                   <ul></ul>
@@ -108,7 +107,7 @@
 
                 <li class="timeline-vertical">
                   <div class="top-info">
-                    <h2 class="day">Thu</h2>
+                    <h2 class="day">Чт</h2>
                   </div>
 
                   <ul></ul>
@@ -116,7 +115,7 @@
 
                 <li class="timeline-vertical">
                   <div class="top-info">
-                    <h2 class="day">Fri</h2>
+                    <h2 class="day">Пт</h2>
                   </div>
 
                   <ul></ul>
@@ -142,7 +141,7 @@ export default {
           "Lindy Ong",
           "LKCSOB SR-3-3",
           "1200 - 15:15",
-          "Tue"
+          "Вт"
         ]
       },
       {
@@ -152,7 +151,7 @@ export default {
           "Rafael J. Barros",
           "SIS SR-2-4",
           "0815 - 1130",
-          "Wed"
+          "Ср"
         ]
       },
       {
@@ -162,7 +161,7 @@ export default {
           "Benjamin Gan",
           "SIS SR-2-3",
           "1200 - 1515",
-          "Wed"
+          "Ср"
         ]
       },
       {
@@ -172,7 +171,7 @@ export default {
           "Amy Seow",
           "LKCSOB SR-2-4",
           "0815 - 1130",
-          "Thu"
+          "Чт"
         ]
       },
       {
@@ -182,7 +181,7 @@ export default {
           "Kyong Jin Shim",
           "SIS-B1-1",
           "0815 - 1130",
-          "Fri"
+          "Пт"
         ]
       }
     ];

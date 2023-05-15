@@ -129,8 +129,8 @@ export default {
   background: transparent;
 }
 
-.scroll {
+/*.scroll {
   height: 15vh;
   overflow-y: auto;
-}
+}*/
 </style>

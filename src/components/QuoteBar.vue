@@ -22,10 +22,10 @@ export default {
     };
   },
   mounted() {
-    Vue.axios.get("https://quotes.rest/qod").then(resp => {
+    Vue.axios.get("https://today.zenquotes.io/api/5/5").then(resp => {
       this.list = resp.data.contents.quotes[0].quote;
       this.author = resp.data.contents.quotes[0].author;
-    });
+    }).catch(error=> console.log(error));
   }
 };
 </script>
