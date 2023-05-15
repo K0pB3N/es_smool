@@ -1,22 +1,6 @@
 <template>
   <div class="area">
     <ul class="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-
       <!-- to redirect to sign in page -->
       <div class="d-flex justify-content-end">
         <div id="sign-up">
@@ -114,12 +98,12 @@ export default {
       if (creds == null) {
         // invalid username
         console.log("invalid username");
-        alert("Invalid username or password. Please try again.");
+        alert("Неверное имя пользователя или пароль. Пожалуйста, повторите попытку.");
       } else {
         // valid username
         if (this.password != creds["Password"]) {
           // wrong password
-          alert("Invalid username or password. Please try again.");
+          alert("Неверное имя пользователя или пароль. Пожалуйста, повторите попытку.");
         } else {
           // login
           window.localStorage.setItem("username", this.username);

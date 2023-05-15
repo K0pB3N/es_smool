@@ -10,7 +10,7 @@
             type="text"
             id="q"
             class="form-control"
-            placeholder="Job, Title, Keyword, Company"
+            placeholder="Работа, Компании..."
             aria-label="keyword"
             aria-describedby="basic-addon1"
           />
@@ -99,7 +99,7 @@ export default {
   },
   data() {
     return {
-      searchTerm: "",
+      searchTerm: "Стажировка",
       results: [],
       placeholder: "Тип занятости"
     };
@@ -107,16 +107,16 @@ export default {
   methods: {
     search() {
       var q = document.getElementById("q").value.replace(/\s+/g, "+");
-      q += "+" + this.searchTerm + "+" + "Singapore";
+      q += "+" + this.searchTerm + "+" + "Russia";
       console.log(q);
-      let key = "AIzaSyBOgzNtXX2fAoV5euB-4urR_L2pJTPan7o";
-      let cx = "f5cccf8e1ce3fceca";
+      // let key = "AIzaSyBOgzNtXX2fAoV5euB-4urR_L2pJTPan7o";
+      // let cx = "f5cccf8e1ce3fceca";
       let url =
-        "https://www.googleapis.com/customsearch/v1?key=" +
-        key +
-        "&cx=" +
-        cx +
-        "&q=" +
+        "https://api.hh.ru/widgets/vacancies/search?count=3&locale=RU&links_color=1560b2&border_color=1560b2&employment=full&employment=part&employment=volunteer&employment=probation&professional_role=10&professional_role=121&professional_role=104&professional_role=107&professional_role=112&professional_role=113&professional_role=114&professional_role=116&professional_role=12&professional_role=124&professional_role=125&professional_role=126&professional_role=148&professional_role=150&professional_role=155&professional_role=156&professional_role=157&professional_role=160&professional_role=164&professional_role=165&professional_role=25&professional_role=34&professional_role=36&professional_role=73&professional_role=96" +
+        // key +
+        // "&cx=" +
+        // cx +
+        // "&q=" +
         q;
       // console.log(url);
       var cardWrap = document.getElementById("cardWrap");
@@ -203,7 +203,7 @@ body {
   margin-bottom: 10px !important;
   margin-top: 10px !important;
 }
-/* .button {
+.button {
   background-color: #42b489; 
   border: none;
   color: white;
@@ -212,7 +212,7 @@ body {
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
-} */
+} 
 .button2 {
   background-color: white;
   color: black;
@@ -222,11 +222,11 @@ body {
   background-color: #008cba;
   color: white;
 }
-/* .box {
+.box {
   background: #f9f9f9;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin-bottom: 20px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-} */
+}
 </style>

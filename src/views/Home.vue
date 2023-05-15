@@ -5,11 +5,11 @@
       <b-row class="d-sm-flex justify-content-sm-center">
         <b-col sm="9" cols="12">
           <b-row>
-            <b-row class="mt-3">
+            <b-row class="mt-3" style="margin-left: 0.1rem;">
               <b-col sm="12" lg="12" md="12" xl="6" cols="12">
                 <div class="box height24 mx-auto">
                   <h5 class="particletext hearts" style="font-size: 1.5em">
-                    <span id="username">Здравствуй, {{ name }}! 🙂</span>
+                    <span id="username">Здравствуй, {{ username }}! 🙂</span>
                   </h5>
                   <QuoteBar />
                 </div>
@@ -61,7 +61,7 @@
                           src="../../cards/image/8.gif"
                           style="width: 4rem;"
                           class="mr-2"
-                        /><span style="font-size: 1.5rem;"
+                        /><span style="font-size: 1.3rem;"
                           >Продолжайте в том же духе! 🤩</span
                         >
                       </div>
@@ -644,10 +644,10 @@ p {
   outline: none;
 }
 
-.scroll {
+/*.scroll {
   overflow: auto;
   height: 18vh;
-}
+}*/
 
 .trans {
   background: transparent;
