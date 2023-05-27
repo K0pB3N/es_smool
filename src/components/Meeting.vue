@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="meeting">
     <section class="todo-wrapper mr-3">
       <h1 class="todo-title">
         Встречи по проектам
@@ -24,8 +24,8 @@
 
       <div v-if="pending2.length > 0">
         <p class="status busy">
-          У Вас имеется {{ pending2.length }} <span v-if="pending2.length > 1"> назначенные встречи
-          </span> 
+          У Вас имеется {{ pending2.length }}
+          <span v-if="pending2.length > 1"> назначенные встречи </span>
           <span v-if="pending2.length === 1"> назначенная встреча</span>
         </p>
         <transition-group name="todo-item" tag="ul" class="todo-list">
@@ -94,7 +94,7 @@ export default {
   name: "Meeting",
   data() {
     return {
-      meetList: [],
+      meetList: [1, 2, 3],
       new_meet: "",
       showComplete: false
     };
@@ -106,6 +106,7 @@ export default {
     meetList: {
       handler: function(updatedList2) {
         localStorage.setItem("meet_list", JSON.stringify(updatedList2));
+        console.log(localStorage.meet_list);
       },
       deep: true
     }
@@ -191,3 +192,13 @@ export default {
   }
 };
 </script>
+
+<style>
+.meeting {
+  height: 95% !important;
+}
+.todo-wrapper {
+  width: 100% !important;
+  height: 95% !important;
+}
+</style>

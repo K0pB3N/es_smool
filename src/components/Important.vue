@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="important">
     <section class="todo-wrapper mr-3">
       <h1 class="todo-title">
         Важные даты
@@ -24,10 +24,8 @@
 
       <div v-if="pending1.length > 0">
         <p class="status busy">
-          У Вас {{ pending1.length }}<span
-            v-if="pending1.length > 1"
-            > важные даты</span
-          >
+          У Вас {{ pending1.length
+          }}<span v-if="pending1.length > 1"> важные даты</span>
           <span v-if="pending1.length === 1"> важная дата</span>
         </p>
         <transition-group name="todo-item" tag="ul" class="todo-list">
@@ -193,3 +191,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.important {
+  height: 95% !important;
+}
+</style>
